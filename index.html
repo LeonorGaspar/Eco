@@ -5,7 +5,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogo de Perguntas</title>
+    <title>Métodos de pagamento </title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -19,7 +19,10 @@
             <div class="d-flex " style=" width: 95%; margin: auto; ">
                 <a href="#" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none"
                     style="margin-right: 50px;">
-                    <img src="income.png" alt="logo" width="50" height="50">
+                    <img src="log-payment.png" alt="logo" style="    position: absolute;
+                    height: 170px;
+                    margin-top: 50px;">
+
                 </a>
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 menu-li"
                     style="width: 100%;">
@@ -27,7 +30,7 @@
                     <li class="button"><a href="#page1" class="nav-link px-2 text-white">Cartões</a></li>
                     <li class="button"><a href="#page2" class="nav-link px-2 text-white">Transferências Bancárias</a>
                     </li>
-                    <li class="button"><a href="#page3" class="nav-link px-2 text-white">Crypto-moedas</a></li>
+                    <li class="button"><a href="#page3" class="nav-link px-2 text-white">Criptomoeda </a></li>
                     <li class="button"><a href="#page4" class="nav-link px-2 text-white">Cheques</a></li>
                     <li class="button"><a href="#page5" class="nav-link px-2 text-white">Pagamentos Digitais</a></li>
                     <li class="button"><a href="#page6" class="nav-link px-2 text-white">Troca direta</a></li>
@@ -36,54 +39,257 @@
             </div>
         </div>
     </header>
-    <div id="home" style="height: 100vh; padding-top: 125px;">
+    <div class="body-site" id="home" style="height: 100vh">
         <div class="container-xxl">
-            <h1>Home</h1>
-        </div>
-    </div>
-    <div id="page1" style="height: 100vh;  padding-top: 125px; background: #FF9800;">
-        <div class="container-xxl">
-            <h1>Cartões</h1>
-            <h2>cartão débito</h2>
-            <h2>cartão credito</h2>
-            <h2>cartão pré-pago</h2>
-        </div>
-    </div>
-    <div id="page2" style="height: 100vh; padding-top: 125px; background: #FF07A7;">
-        <div class="container-xxl">
-            <h1>Transferências Bancárias</h1>
-        </div>
-    </div>
-    <div id="page3" style="height: 100vh; padding-top: 125px; background: #9D1D96;">
-        <div class="container-xxl">
-            <h1>crypto moedas</h1>
-        </div>
 
-    </div>
-    <div id="page4" style="height: 100vh; padding-top: 125px; background: #E61A1A;">
-
-        <div class="container-xxl">
-            <h1>Cheques</h1>
-        </div>
+            <div class="row align-items-center g-lg-5 py-5">
+                <div class="col-lg-7 text-center text-lg-start">
+                    <h1 class="display-4 fw-bold lh-1 mb-3">Métodos de pagamento </h1>
+                    <p class="col-lg-10 fs-4">
+                        Olá, pequenos exploradores! 🌟 Bem-vindos ao nosso incrível mundo de descobertas! Hoje, vamos
+                        aprender sobre as diferentes formas de pagar pelas coisas que queremos comprar. Já te
+                        perguntaste como as pessoas pagam por brinquedos, livros ou gelados? Vem connosco e desvenda
+                        esse mistério de forma divertida! 🚀💰
+                </div>
+                <div class="col-md-10 mx-auto col-lg-5">
+                    <div class="p-4 p-md-5 ">
+                        <video width="300" height="300" controls autoplay>
+                            <source src="video-home-pequeno.mp4" type="video/mp4">
+                            Seu navegador não suporta a reprodução de vídeos.
+                        </video>
+                    </div>
+                </div>
+            </div>
 
 
-    </div>
-    <div id="page5" style="height: 100vh; padding-top: 125px; background: #ADE250;">
 
-        <div class="container-xxl">
-            <h1>Pagamentos Digitais</h1>
-        </div>
-
-    </div>
-    <div id="page6" style="height: 100vh; padding-top: 125px; background: #F7E501;">
-
-        <div class="container-xxl">
-            <h1>Troca direta</h1>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+    <div class="body-site" id="page1" style="height: 100vh;  background: #FF9800;">
+        <div class="container-xxl">
+            <h1 style="color: white;">Cartões</h1>
+            <div class="container">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="cdebito.png" alt="logo"
+                                style="height: 170px;height: 200px;width: 330px;padding: 25px;margin: auto;">
+
+                            <div class="card-body">
+                                <h2>Cartão débito</h2>
+                                <p class="card-text">
+                                    O cartão de débito permite comprar usando o dinheiro da conta bancária, retira o
+                                    valor diretamente da conta para pagar pelas compras.</br> É como usar dinheiro, mas
+                                    sem precisar de notas ou moedas. </br>Só é possível gastar o que está disponível na
+                                    conta, caso contrário, o cartão não funciona. É uma forma fácil e segura de fazer
+                                    compras.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="CartaoGold.jpg" alt="logo"
+                                style="height: 170px;height: 200px;width: 330px;padding: 25px;margin: auto;">
+
+                            <div class="card-body">
+                                <h2>Cartão credito</h2>
+                                <p class="card-text">
+                                    O cartão de crédito permite comprar mesmo sem ter dinheiro no momento, é como pedir
+                                    dinheiro emprestado.</br> É necessário devolver o valor depois, e, se não pagar a
+                                    tempo, pode haver multas. É importante usá-lo com responsabilidade e sempre pagar o
+                                    que deve.</br></br></br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="cartao-pre-pago.png" alt="logo"
+                                style="height: 170px;height: 200px;width: 330px;padding: 25px;margin: auto;">
+                            <div class="card-body">
+
+                                <h2>Cartão pré-pago</h2>
+                                <p class="card-text">
+                                    O cartão pré-pago bancário é um tipo de cartão que se carrega um valor antecipado
+                                    antes de usá-lo. Ele funciona de forma semelhante a um cartão de débito, mas só pode
+                                    gastar o que está carregado no cartão. Não é necessário ter conta bancária para
+                                    usá-lo, e ele é uma opção prática e segura para fazer compras ou realizar pagamentos
+                                    sem correr o risco de gastar mais do que o disponível.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="body-site" id="page2" style="height: 100vh; background: #FF07A7;">
+        <div class="container-xxl">
+            <h1 style="color: white;">Transferências Bancárias</h1>
+
+            <div class="row align-items-center g-lg-5 py-5">
+                <div class="col-md-10 mx-auto col-lg-5">
+                    <div class="p-4 p-md-5 ">
+                        <img src="transfer.JPG" alt="logo" style="width: 470px;object-fit: cover;height: 400px;">
+                    </div>
+                </div>
+                <div class="col-lg-7 text-center text-lg-start" style="color: white;">
+                    <p class="  fs-5">
+                        Uma transferência bancária é como enviar uma carta invisível com dinheiro dentro. Em vez de
+                        levar dinheiro na mão para dar a alguém, os adultos usam o banco para enviar o dinheiro
+                        diretamente para a conta dessa pessoa. É como magia, mas com tecnologia
+                    </p>
+                    <div style="background-color: white;
+                    padding: 10px;
+                    border-radius: 5px; color: #333">
+                    <p class="  fs-6">
+                        <b>Exemplo prático</b> </br>
+                        Imagina que a tua amiga Maria fez anos e tu queres dar-lhe 5 euros de presente. Em vez de
+                        levares o dinheiro até à casa dela, podes pedir aos teus pais para fazerem uma transferência
+                        bancária.
+                        </br>
+                        Os teus pais dizem ao banco: "Quero enviar 5 euros para a conta da Maria."
+                        </br>
+                        O banco faz a mágica e o dinheiro aparece na conta dela.
+                        </br>
+                        A Maria fica feliz e pode usar o dinheiro para comprar o que quiser!
+                    </p>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="body-site" id="page3" style="height: 100vh; background: #9D1D96;">
+            <div class="container-xxl" style="color: white;">
+                <h1>Criptomoeda </h1>
+
+                <div class="row align-items-center g-lg-5 py-5">
+                    <div class="col-lg-7 text-center text-lg-start" style="color: white;">
+                        <p class="  fs-5">
+                            As criptomoedas são um tipo de dinheiro digital. Elas não existem em forma de notas ou moedas, como o dinheiro que conheces. Em vez disso, são feitas de códigos de computador e só existem na interne
+                        </p>
+
+                        <p class="  fs-6">
+                            Imagina que tens uma moeda de ouro virtual no teu jogo de computador.
+                        </br>
+                            Tu podes trocar essa moeda com os teus amigos por outros itens do jogo.
+                        </br>
+                            Agora, pensa que essa moeda de ouro virtual é uma criptomoeda. Em vez de ser usada só no jogo, ela pode ser usada para comprar coisas no mundo real, como livros ou brinquedos!
+                            
+                        </p>
+                  
+                    </div>
+                    <div class="col-md-10 mx-auto col-lg-5">
+                        <div class="p-4 p-md-5 ">
+                            <img src="criptomoeda.JPG" alt="logo" style="width: 470px;object-fit: cover;height: 400px;">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="body-site" id="page4" style="height: 100vh; background: #E61A1A;">
+
+            <div class="container-xxl">
+                <h1 style="color: white;">Cheques </br> Bancários
+
+                </h1>
+                <div class="row align-items-center g-lg-5 py-5">
+
+                    <div class="col-md-10 mx-auto col-lg-5">
+                        <div class="p-4 p-md-5 ">
+                            <img src="cheque.jpg" alt="logo" style="width: 470px;object-fit: cover; ">
+                        </div>
+                    </div>
+                    <div class="col-lg-7 text-center text-lg-start" style="color: white;">
+                        <p class="  fs-4">
+                            Um cheque é como um vale ou um bilhete mágico que diz ao banco para pagar uma certa quantia de dinheiro a alguém. Em vez de levar dinheiro na mão, os adultos podem escrever num papel (o cheque) quanto querem pagar e dar esse papel à pessoa.
+
+                        </p>
+                        <p class="  fs-4">um cheque! É como um bilhete mágico que transforma palavras em dinheiro. 😊
+</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="body-site" id="page5" style="height: 100vh;  background: #ADE250;">
+
+            <div class="container-xxl">
+                <h1>Pagamentos Digitais</h1>
+                <div class="row align-items-center g-lg-5 py-5">
+
+
+                    <div class="col-lg-7 text-center text-lg-start"  >
+                        <p class="  fs-4">
+                            
+                            Os pagamentos digitais são uma maneira de pagar por coisas usando o teu telemóvel, computador ou outros dispositivos eletrónicos, sem precisar de usar dinheiro em papel ou moedas. É como usar magia para enviar dinheiro pela internet!
+
+
+                        </p>
+                        <p style="background-color: white;
+                        padding: 10px;
+                        border-radius: 5px;">Exemplo Prático
+                            Imagine que você quer comprar um brinquedo online. Em vez de ir até a loja com dinheiro, você pode usar o celular do seu pai ou mãe para pagar pelo brinquedo. O dinheiro sai da conta bancária deles e vai para a loja, e o brinquedo é enviado para sua casa.</p>
+                        <h4>Apps de Pagamento</h4>
+                        <ul style="    list-style: none;
+                        padding-left: 0;
+                        margin-left: 0;">
+                        <li><b>PayPal</b>  Plataforma global para transações online.</li>
+                        <li><b>Google Pay</b> Pagamentos via dispositivos Android.</li>
+                        <li><b>Apple Pay </b> Para pagamentos em dispositivos Apple.</li>
+                        <li><b>MB-Way</b></li>
+                    </ul>
+
+
+                    </div>
+                        <div class="col-md-10 mx-auto col-lg-5">
+                            <div class="p-4 p-md-5 ">
+                                <img src="2869.jpg" alt="logo" style="width: 470px;object-fit: cover; ">
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+        </div>
+        <div class="body-site" id="page6" style="height: 100vh; background: #F7E501;">
+
+            <div class="container-xxl">
+                <h1>Troca direta</h1>
+
+                <div class="row align-items-center g-lg-5 py-5">
+
+
+                        <div class="col-md-10 mx-auto col-lg-5">
+                            <div class="p-4 p-md-5 ">
+                                <img src="troca.jpg" alt="logo" style="width: 470px;object-fit: cover; ">
+                            </div>
+                        </div>
+                        
+                    <div class="col-lg-7 text-center text-lg-start"  >
+                        <p class="  fs-4">
+                            
+                            A troca direta, também conhecida como escambo, é uma maneira antiga de obter coisas sem usar dinheiro. Em vez de pagar com moedas ou notas, as pessoas trocavam coisas que tinham por outras que precisavam. É como uma troca de brinquedos entre amigos
+
+                        </p>
+                        <p class="  fs-4">
+                            
+                            Imagina que tens um livro que já leste e não queres mais, o teu amigo tem um puzzle que gostavas de ter. Podem combinar uma troca, o livro pelo puuzle. Assim, os dois adquirem  algo novo sem gastar dinheiro!
+                        </p>
+
+                    </ul>
+
+
+                    </div>
+                    </div>
+            </div>
+
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>

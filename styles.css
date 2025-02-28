@@ -1,3 +1,7 @@
+body {
+	color: #333 !important;
+}
+
 header {
 	border-bottom: 1px solid #ccc;
 	background-color: #fff;
@@ -6,6 +10,7 @@ header {
 	position: fixed;
 	width: 100%;
 	top: 0;
+	z-index: 9;
 }
 
 .menu-li li {
@@ -21,27 +26,35 @@ header {
 	border: 1px solid #fff;
 	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
+
 .menu-li li:nth-child(1) {
 	background-color: #14BCF3;
 }
+
 .menu-li li:nth-child(2) {
 	background-color: #FF9800;
 }
+
 .menu-li li:nth-child(3) {
 	background-color: #FF07A7;
 }
+
 .menu-li li:nth-child(4) {
 	background-color: #9D1D96;
 }
+
 .menu-li li:nth-child(5) {
 	background-color: #E61A1A;
 }
+
 .menu-li li:nth-child(6) {
 	background-color: #A5F701;
 }
+
 .menu-li li:nth-child(7) {
 	background-color: #F7E501;
 }
+
 .menu-li li:nth-child(8) {
 	background-color: #009515;
 }
@@ -66,12 +79,33 @@ header {
 	animation: vibrar 0.2s linear 2;
 }
 
-@keyframes vibrar {
-	0% { transform: translateX(0); }
-	25% { transform: translateX(-3px); }
-	50% { transform: translateX(3px); }
-	75% { transform: translateX(-3px); }
-	100% { transform: translateX(0); }
+.body-site {
+	padding-top: 160px;
 }
 
- 
+h1 {
+	font-size: 45px !important;
+	font-weight: 700 !important;
+}
+
+@keyframes vibrar {
+	0% {
+		transform: translateX(0);
+	}
+
+	25% {
+		transform: translateX(-3px);
+	}
+
+	50% {
+		transform: translateX(3px);
+	}
+
+	75% {
+		transform: translateX(-3px);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}

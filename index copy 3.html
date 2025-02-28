@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Perguntas</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+        .quiz-container { max-width: 500px; margin: auto; padding: 20px; border: 2px solid #000; border-radius: 10px; }
+        button { display: block; width: 100%; margin: 10px 0; padding: 10px; font-size: 18px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h2 id="pergunta">Carregando...</h2>
+        <div id="opcoes"></div>
+        <p id="feedback"></p>
+    </div>
+
+    <script>
+        const perguntas = [
+            { pergunta: "Qual é a cor do céu durante o dia?", opcoes: ["Azul", "Verde", "Vermelho"], resposta: "Azul" },
+            { pergunta: "Quantos lados tem um triângulo?", opcoes: ["3", "4", "5"], resposta: "3" },
+            { pergunta: "Qual animal faz 'miau'?", opcoes: ["Cachorro", "Gato", "Elefante"], resposta: "Gato" }
+        ];
+        
+        let indice = 0;
+        function carregarPergunta() {
+            if (indice >= perguntas.length) {
+                document.getElementById("pergunta").textContent = "Fim do jogo!";
+                document.getElementById("opcoes").innerHTML = "";
+                return;
+            }
+            let q = perguntas[indice];
+            document.getElementById("pergunta").textContent = q.pergunta;
+            document.getElementById("opcoes").innerHTML = "";
+            q.opcoes.forEach(opcao => {
+                let btn = document.createElement("button");
+                btn.textContent = opcao;
+                btn.onclick = () => verificarResposta(opcao);
+                document.getElementById("opcoes").appendChild(btn);
+            });
+        }
+        
+        function verificarResposta(opcaoEscolhida) {
+            let q = perguntas[indice];
+            let feedback = document.getElementById("feedback");
+            if (opcaoEscolhida === q.resposta) {
+                feedback.textContent = "Correto!";
+                feedback.style.color = "green";
+            } else {
+                feedback.textContent = "Errado!";
+                feedback.style.color = "red";
+            }
+            setTimeout(() => {
+                feedback.textContent = "";
+                indice++;
+                carregarPergunta();
+            }, 1000);
+        }
+        
+        carregarPergunta();
+    </script>
+</body>
+</html>
