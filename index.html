@@ -10,7 +10,10 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+        <style>
+            .quiz-container { max-width: 500px; margin: auto; padding: 20px; border-radius: 10px; }
+            button { display: block; width: 100%; margin: 10px 0; padding: 10px; font-size: 18px; cursor: pointer; }
+        </style>
 </head>
 
 <body>
@@ -39,6 +42,8 @@
             </div>
         </div>
     </header>
+    <a href="#page7" class="btquiz text-white">Quiz > </a>
+
     <div class="body-site" id="home" style="height: 100vh">
         <div class="container-xxl">
 
@@ -193,7 +198,7 @@
         <div class="body-site" id="page4" style="height: 100vh; background: #E61A1A;">
 
             <div class="container-xxl">
-                <h1 style="color: white;">Cheques </br> Bancários
+                <h1 style="color: white;">Cheques  Bancários
 
                 </h1>
                 <div class="row align-items-center g-lg-5 py-1">
@@ -287,6 +292,78 @@
 
             </div>
         </div>
+
+        <div class="body-site" id="page7" style="height: 100vh; background: #FFF;">
+            <div class="container-xxl">
+                <div class="quiz-container">
+                    <h2 id="pergunta">Carregando...</h2>
+                    <div id="opcoes"></div>
+                    <p id="feedback"></p>
+                    <p>Pontos: <span id="pontos">0</span></p>
+                    <button id="reiniciar" style="display: none;" onclick="reiniciarJogo()">Reiniciar Jogo</button>
+                </div>
+            
+                <script>
+                    const perguntas = [
+                        { pergunta: "Qual destas opções é um método de pagamento?", opcoes: ["Cartão de supermercado", "Cartão de débito", "Cartão de cidadão"], resposta: "Cartão de débito" },
+                        { pergunta: "O que é uma transferência bancária?", opcoes: ["Quando alguém envia dinheiro de uma conta para outra.", "Quando sacamos dinheiro do banco e guardamos em casa.", "Quando pagamos uma compra com dinheiro em espécie."], resposta: "Quando alguém envia dinheiro de uma conta para outra." },
+                        { pergunta: "O que é a criptomoeda?", opcoes: ["Uma moeda feita de papel e distribuída pelos bancos.", "Um brinquedo usado para jogar videogame.", " Um tipo de dinheiro digital que funciona na internet"], resposta: "Um tipo de dinheiro digital que funciona na internet" },
+                        { pergunta: "O que são cheques bancários?", opcoes: ["Um cartão de crédito usado para fazer compras", "Um papel especial usado para pagar alguém com dinheiro da conta bancária.", " Um cofre onde guardamos dinheiro no banco. "], resposta: "Um papel especial usado para pagar alguém com dinheiro da conta bancária." },
+                    ];
+                    
+                    let indice = 0;
+                    let pontos = 0;
+                    
+                    function carregarPergunta() {
+                        if (indice >= perguntas.length) {
+                            document.getElementById("pergunta").textContent = "Fim do jogo!";
+                            document.getElementById("opcoes").innerHTML = "";
+                            document.getElementById("reiniciar").style.display = "block";
+                            return;
+                        }
+                        let q = perguntas[indice];
+                        document.getElementById("pergunta").textContent = q.pergunta;
+                        document.getElementById("opcoes").innerHTML = "";
+                        q.opcoes.forEach(opcao => {
+                            let btn = document.createElement("button");
+                            btn.textContent = opcao;
+                            btn.onclick = () => verificarResposta(opcao);
+                            document.getElementById("opcoes").appendChild(btn);
+                        });
+                    }
+                    
+                    function verificarResposta(opcaoEscolhida) {
+                        let q = perguntas[indice];
+                        let feedback = document.getElementById("feedback");
+                        if (opcaoEscolhida === q.resposta) {
+                            feedback.textContent = "Correto!";
+                            feedback.style.color = "green";
+                            pontos++;
+                            document.getElementById("pontos").textContent = pontos;
+                        } else {
+                            feedback.textContent = "Errado!";
+                            feedback.style.color = "red";
+                        }
+                        setTimeout(() => {
+                            feedback.textContent = "";
+                            indice++;
+                            carregarPergunta();
+                        }, 1000);
+                    }
+                    
+                    function reiniciarJogo() {
+                        indice = 0;
+                        pontos = 0;
+                        document.getElementById("pontos").textContent = pontos;
+                        document.getElementById("reiniciar").style.display = "none";
+                        carregarPergunta();
+                    }
+                    
+                    carregarPergunta();
+                </script>
+            </div>
+        </div>
+
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
             crossorigin="anonymous"></script>

@@ -109,3 +109,20 @@ h1 {
 		transform: translateX(0);
 	}
 }
+
+.btquiz {
+	position: fixed;
+	bottom: 0;
+	background: red;
+	right: 0;
+	height: 50px;
+	width: 80px;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 10px;
+	border: solid 2px white;
+	font-size: 18px;
+	font-weight: 600;
+}
