@@ -125,6 +125,7 @@ h1 {
 	border: solid 2px white;
 	font-size: 18px;
 	font-weight: 600;
+	z-index: 10;
 }
 
 div#opcoes button {
