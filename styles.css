@@ -140,4 +140,8 @@ div#opcoes button {
     margin-top: 10px  !important;
     left: 10px  !important;
 	}
+ .menu-li {
+	justify-content: flex-end !important;
+ }	
+	
 }
