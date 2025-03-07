@@ -132,3 +132,12 @@ div#opcoes button {
 	border: solid 4px orange;
 	background-color: #99ff65;
 }
+
+
+@media screen and (max-width: 1500px) {
+.img-logo {
+    height: 100px;
+    margin-top: 10px;
+    left: 10px;
+	}
+}
